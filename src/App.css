@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+
+  justify-content: center;
+}
+
+.social-icon {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  color: white;
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Slightly enlarge on hover */
+}
