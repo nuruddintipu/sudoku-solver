@@ -3,7 +3,7 @@ import {Button} from 'react-bootstrap';
 
 
 
-function SudokuButton({ buttonText }) {
+function SudokuButton({ buttonText, handleClick }) {
 
     const styles = {
         button:{
@@ -11,7 +11,15 @@ function SudokuButton({ buttonText }) {
         }
     };
     return (
-      <Button style={styles.button} size="lg" variant="outline-primary">{ buttonText }</Button>
+      <Button
+          style={styles.button}
+          size="lg"
+          variant="outline-primary"
+          onClick={handleClick}
+      >
+          { buttonText }
+
+      </Button>
     );
 }
 
