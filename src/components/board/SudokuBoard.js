@@ -1,13 +1,6 @@
 import React, {useState} from 'react';
 
-function SudokuBoard() {
-
-    const handleBoardClick = (row, col) => {
-        console.log(`${row}, ${col} cell is clicked.`);
-
-        setFocusedCell({ row, col });
-    }
-    const [focusedCell, setFocusedCell] = useState(null);
+function SudokuBoard({  board, focusedCell, onCellClick  }) {
 
 
     const getClassNames = (row, col) => {
@@ -21,7 +14,6 @@ function SudokuBoard() {
         }
         return classNames;
     };
-
 
 
     const defaultStyle = {
@@ -48,12 +40,10 @@ function SudokuBoard() {
         },
     };
 
-    const defaultGrid = Array(9).fill().map(() => Array(9).fill(null));
-
     return (
         <div style={defaultStyle.sudokuBoard}>
-            {defaultGrid.map((row, rowIndex) =>
-                row.map((_, colIndex) => (
+            {board.map((row, rowIndex) =>
+                row.map((value, colIndex) => (
                     <div
                         key={`${rowIndex}-${colIndex}`}
                         className={getClassNames(rowIndex, colIndex)}
@@ -63,9 +53,9 @@ function SudokuBoard() {
                                 ? defaultStyle.focused
                                 : {}),
                         }}
-                        onClick={() => handleBoardClick(rowIndex, colIndex)}
+                        onClick={() => onCellClick(rowIndex, colIndex)}
                     >
-                        {defaultGrid[rowIndex][colIndex]}
+                        {value}
                     </div>
                 ))
             )}

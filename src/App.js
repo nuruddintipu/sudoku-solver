@@ -8,10 +8,21 @@ import ControlBoard from "./components/board/ControlBoard";
 import {useState} from "react";
 
 function App() {
+    const [board, setBoard] = useState(Array(9).fill().map(() => Array(9).fill(null)));
 
+    const [focusedCell, setFocusedCell] = useState(null);
 
+    const handleBoardClick = (row, col) => {
+        setFocusedCell({row, col});
+    }
     const handleControlClick = (number) => {
-        console.log(`selected number: ${number}`);
+
+        if(focusedCell){
+            const { row, col } = focusedCell;
+            const updatedBoard = [...board];
+            updatedBoard[row][col] = number; // Place the selected number in the focused cell
+            setBoard(updatedBoard);
+        }
     }
 
 
@@ -26,7 +37,11 @@ function App() {
             >
                 <Row>
                     <Col>
-                        <SudokuBoard />
+                        <SudokuBoard
+                            board={board}
+                            focusedCell={focusedCell}
+                            onCellClick={handleBoardClick}
+                        />
                     </Col>
                 </Row>
 
