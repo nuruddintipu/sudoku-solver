@@ -6,8 +6,8 @@ function Footer() {
 
     const styles = {
         footer: {
-            backgroundColor: '#222',
-            color: '#fff',
+            backgroundColor: '#eaeaea',
+            color: '#222',
             padding: '20px 0',
         },
         container: {
@@ -18,6 +18,7 @@ function Footer() {
             maxWidth: '1200px',
             margin: '0 auto',
             padding: '0 10px',
+            color: '#222'
         },
         brand: {
             flex: '1',
@@ -36,9 +37,10 @@ function Footer() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            color: '#222'
         },
         link: {
-            color: '#fff',
+            color: '#222',
             textDecoration: 'none',
             marginBottom: '5px',
             fontSize: '0.9rem',

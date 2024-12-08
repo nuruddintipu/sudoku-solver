@@ -5,20 +5,22 @@ function NavBar() {
 
     const styles = {
         container: {
-            backgroundColor: '#222',
+            backgroundColor: '#eaeaea',
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'space-around',
             flexWrap: 'wrap',
-            marginTop: '10px',
-            marginBottom: '10px',
             fontSize: '15px',
             fontWeight: '500',
             padding: '10px',
-            color: '#fff'
+            color: '#222'
+        },
+        brand:{
+            cursor: 'pointer'
         },
         menu: {
+            cursor: 'pointer',
             display: 'flex',
             flexWrap: 'wrap',
             flexDirection: 'row',
@@ -28,7 +30,7 @@ function NavBar() {
     };
     return (
         <div style={styles.container}>
-            <div>
+            <div style={styles.brand}>
                 Sudoku
             </div>
             <div style={styles.menu}>
