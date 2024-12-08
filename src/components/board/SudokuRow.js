@@ -1,7 +1,7 @@
 import React from 'react';
 import SudokuCell from './SudokuCell';
 
-function SudokuRow ({ rowValues, rowIndex }){
+function SudokuRow ({ rowValues, rowIndex, onClick}){
     return (
         <div className="board-row">
             {rowValues.map((value,colIndex) => (
@@ -9,6 +9,7 @@ function SudokuRow ({ rowValues, rowIndex }){
                              cellValue={value}
                              row={rowIndex}
                              col={colIndex}
+                             onClick ={onClick}
                 />
             ))}
         </div>

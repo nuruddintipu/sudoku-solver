@@ -7,10 +7,12 @@ html, body {
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure it covers the full viewport height */
+  min-height: 100vh;
 }
 .sudoku-board{
-  border: 1px solid #000;
+  display: grid;
+  width: 360px;
+  height: 360px;
 }
 .sudoku-cell {
   border: 1px solid #e8e8e8;
@@ -46,6 +48,7 @@ html, body {
 .outer-right-border {
   border-right: 1px solid black;
 }
+
 .social-icons {
   display: flex;
   gap: 10px;

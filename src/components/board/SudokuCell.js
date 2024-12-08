@@ -1,26 +1,22 @@
 import React, {useState} from 'react';
-
-function SudokuCell({cellValue, row, col}) {
-    const [isHovered, setIsHovered] = useState(false);
+import Cell from "./Cell";
 
 
-    const handleMouseEnter = () => setIsHovered(true);
-    const handleMouseLeave = () => setIsHovered(false);
 
+function SudokuCell({cellValue, row, col, onClick}) {
     const styles = {
         sudokuCell: {
-            background: isHovered ? '#f1f1f1' : '#fff',
             float: 'left',
             fontSize: '24px',
             fontWeight: 'bold',
             lineHeight: '34px',
-            height: '34px',
+            height: '40px',
             marginRight: '-1px',
             marginTop: '-1px',
             padding: '0',
             textAlign: 'center',
-            width: '34px',
-        },
+            width: '40px',
+        }
     };
 
     const getClassNames = () => {
@@ -38,13 +34,15 @@ function SudokuCell({cellValue, row, col}) {
     }
 
 
-
     return (
         <div className={getClassNames()} style={styles.sudokuCell}
-             onMouseEnter={() => setIsHovered(true)}
-             onMouseLeave={() => setIsHovered(false)}
         >
-            {cellValue}
+            <Cell
+                type='text'
+                style={styles.input}
+                maxLength={1}
+                onClick={()=> onClick(row, col)}
+            />
         </div>
     );
 }
