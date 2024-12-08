@@ -4,20 +4,6 @@ import Cell from "./Cell";
 
 
 function SudokuCell({cellValue, row, col, onClick}) {
-    const styles = {
-        sudokuCell: {
-            float: 'left',
-            fontSize: '24px',
-            fontWeight: 'bold',
-            lineHeight: '34px',
-            height: '40px',
-            marginRight: '-1px',
-            marginTop: '-1px',
-            padding: '0',
-            textAlign: 'center',
-            width: '40px',
-        }
-    };
 
     const getClassNames = () => {
         let classNames = "sudoku-cell";
@@ -35,11 +21,10 @@ function SudokuCell({cellValue, row, col, onClick}) {
 
 
     return (
-        <div className={getClassNames()} style={styles.sudokuCell}
+        <div className={getClassNames()}  style={{display: 'flex'}}
         >
             <Cell
                 type='text'
-                style={styles.input}
                 maxLength={1}
                 onClick={()=> onClick(row, col)}
             />

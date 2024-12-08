@@ -9,14 +9,6 @@ html, body {
   flex-direction: column;
   min-height: 100vh;
 }
-.sudoku-board{
-  display: grid;
-  width: 360px;
-  height: 360px;
-}
-.sudoku-cell {
-  border: 1px solid #e8e8e8;
-}
 
 .sudoku-cell.top-border {
   border-top: 1px solid #000;

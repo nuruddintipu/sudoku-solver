@@ -3,7 +3,7 @@ import SudokuCell from './SudokuCell';
 
 function SudokuRow ({ rowValues, rowIndex, onClick}){
     return (
-        <div className="board-row">
+        <div className="board-row"  style={{display: 'flex'}}>
             {rowValues.map((value,colIndex) => (
                 <SudokuCell  key={colIndex}
                              cellValue={value}
