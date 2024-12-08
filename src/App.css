@@ -11,34 +11,19 @@ html, body {
 }
 
 .sudoku-cell.top-border {
-  border-top: 1px solid #000;
+  border-top: 1px solid #000 !important;
 }
 
 .sudoku-cell.bottom-border {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #000 !important;
 }
 
 .sudoku-cell.left-border {
-  border-left: 1px solid #000;
+  border-left: 1px solid #000 !important;
 }
 
 .sudoku-cell.right-border {
-  border-right: 1px solid #000;
-}
-.outer-top-border {
-  border-top: 1px solid black;
-}
-
-.outer-bottom-border {
-  border-bottom: 1px solid black;
-}
-
-.outer-left-border {
-  border-left: 1px solid black;
-}
-
-.outer-right-border {
-  border-right: 1px solid black;
+  border-right: 1px solid #000 !important;
 }
 
 .social-icons {

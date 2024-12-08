@@ -14,10 +14,6 @@ function App() {
         console.log(`selected number: ${number}`);
     }
 
-    const handleBoardClick = (row, col) => {
-        console.log(`${row}, ${col} cell is clicked.`);
-    }
-
 
 
     return (
@@ -30,7 +26,7 @@ function App() {
             >
                 <Row>
                     <Col>
-                        <SudokuBoard onClick = {handleBoardClick}/>
+                        <SudokuBoard />
                     </Col>
                 </Row>
 
