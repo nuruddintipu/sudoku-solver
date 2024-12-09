@@ -75,15 +75,15 @@ function Footer() {
             <>
                 <div style={styles.container}>
                     <div style={styles.brand}>
-                        <h2 style={styles.brandTitle}>MyApp</h2>
-                        <p style={styles.brandText}>Where success is a tradition.</p>
+                        <h2 style={styles.brandTitle}>Sudoku</h2>
+                        {/*<p style={styles.brandText}>Where success is a tradition.</p>*/}
                     </div>
 
 
                     <div style={styles.links}>
-                        <a style={styles.link} href="/about">About</a>
-                        <a style={styles.link} href="/contact">Contact</a>
-                        <a style={styles.link} href="/privacy-policy">Privacy Policy</a>
+                        <a style={styles.link} href="/">About</a>
+                        <a style={styles.link} href="/">Contact</a>
+                        <a style={styles.link} href="/">Privacy Policy</a>
                     </div>
 
 

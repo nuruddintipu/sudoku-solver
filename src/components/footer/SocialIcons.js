@@ -17,7 +17,7 @@ function SocialIcons() {
     return (
         <div className="social-icons">
             <SocialIcon icon={faTwitter}/>
-            <SocialIcon href="https://facebook.com" icon={faFacebook}/>
+            <SocialIcon icon={faFacebook}/>
             <SocialIcon icon={faInstagram}/>
             <SocialIcon icon={faLinkedin}/>
         </div>
