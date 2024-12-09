@@ -2,6 +2,7 @@
   "name": "sudoku-solver",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://nuruddintipu.github.io/sudoku-solver/",
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.7.1",
     "@fortawesome/react-fontawesome": "^0.2.2",

@@ -26,6 +26,12 @@ html, body {
   border-right: 1px solid #000 !important;
 }
 
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+
 .social-icons {
   display: flex;
   gap: 10px;
